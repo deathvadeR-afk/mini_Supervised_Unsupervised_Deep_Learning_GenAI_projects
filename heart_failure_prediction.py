@@ -61,3 +61,32 @@ y_estimate = model.predict(X_test, verbose=0)
 y_estimate = np.argmax(y_estimate, axis=1)
 y_true = np.argmax(Y_test, axis=1)
 print(classification_report(y_true, y_estimate))
+
+# Example: Test the model with a new sample
+# Replace the values below with actual feature values in the correct order
+new_sample = pd.DataFrame([{
+    'age': 60,
+    'anaemia': 0,
+    'creatinine_phosphokinase': 250,
+    'diabetes': 1,
+    'ejection_fraction': 35,
+    'high_blood_pressure': 0,
+    'platelets': 250000,
+    'serum_creatinine': 1.2,
+    'serum_sodium': 137,
+    'sex': 1,
+    'smoking': 0,
+    'time': 100
+}])
+
+# One-hot encode and align columns
+new_sample = pd.get_dummies(new_sample)
+new_sample = new_sample.reindex(columns=x.columns, fill_value=0)
+
+# Standardize numeric features
+new_sample_scaled = ct.transform(new_sample)
+
+# Predict
+prediction = model.predict(new_sample_scaled)
+predicted_class = np.argmax(prediction, axis=1)
+print("Predicted class (0=survived, 1=died):", predicted_class[0])
