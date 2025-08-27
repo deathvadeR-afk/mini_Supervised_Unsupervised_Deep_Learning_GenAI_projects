@@ -1,6 +1,6 @@
 # mini_Supervised_Unsupervised_Deep_Learning_GenAI_projects
 
-A collection of compact hands-on projects covering supervised, unsupervised, deep learning and generative AI topics. Each project is self-contained and demonstrates typical data preprocessing, model building, training, and evaluation workflows for small real-world or educational datasets.
+A collection of compact hands-on projects covering supervised, unsupervised, deep learning, and generative AI topics. Each project is self-contained and demonstrates typical data preprocessing, model building, training, and evaluation workflows for small real-world or educational datasets.
 
 ## Projects (one- to two-sentence summaries)
 
@@ -31,6 +31,9 @@ A collection of compact hands-on projects covering supervised, unsupervised, dee
 - cancer_classifier_with_KNeighborsClassifier.py  
   Trains a K-Nearest Neighbors classifier on the scikit-learn breast cancer dataset, evaluates validation accuracy for many k values, and plots accuracy vs k to help choose a neighborhood size.
 
+- PCA Classification Particles/  
+  Demonstrates dimensionality reduction with PCA on synthetic or real datasets and follows with classification and visualizations (particle-style scatter/cluster visualizations and decision-boundary illustration) to show how PCA affects separability and classifier performance.
+
 - requirements.txt  
   Lists core Python package dependencies (pandas, tensorflow, scikit-learn, matplotlib, seaborn, numpy) required to run many of the notebooks and scripts.
 
@@ -48,9 +51,9 @@ A collection of compact hands-on projects covering supervised, unsupervised, dee
 
 ## Notes and tips
 
-- Many notebooks are designed for educational exploration; they include data-download cells or assume the dataset is placed in a specific folder — check the top cells for dataset paths and adjust as needed.  
-- For heavy models or transformer experiments, use a GPU runtime (e.g., Colab GPU) to speed up training.  
-- The requirements file pins minimal core packages; some notebooks (e.g., machine translation) may need extra packages like `transformers`, `datasets`, or `sacrebleu` — install them as needed per notebook.
+- Many notebooks are designed for educational exploration; check top cells for dataset paths and adjust as needed.  
+- For transformer or heavier models, use a GPU runtime (e.g., Colab GPU) to speed up training.  
+- Some notebooks may require extra packages (e.g., `transformers`, `datasets`, `sacrebleu`) beyond requirements.txt — install them as needed per notebook.
 
 ## Contributing
 
@@ -58,4 +61,4 @@ Contributions, improvements, and bug fixes are welcome. Please open issues or PR
 
 ## License
 
-No license file is included in the repository; treat the code as "as-is" until an explicit license is added. If you want this project to be usable by others, consider adding an OSI-compatible license (e.g., MIT).
+No license file is included in the repository; treat the code as "as-is" until an explicit license is added. Consider adding an OSI-compatible license (e.g., MIT) if you want others to reuse the work.
